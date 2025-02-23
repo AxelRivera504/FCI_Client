@@ -21,8 +21,8 @@ class FormElementsControls extends React.Component {
             timeout={1500} enter={false} exit={false}>
             <div>  
               <PageTitle heading="Form Controls"
-                subheading="Wide selection of forms controls, using the Bootstrap 5 code base, but built with React."
-                icon="pe-7s-display1 icon-gradient bg-premium-dark"/>
+                  subheading="Wide selection of forms controls, using the Bootstrap 5 code base, but built with React."
+                  icon="pe-7s-display1 icon-gradient bg-premium-dark"/>
               <Tabs defaultActiveKey="1" renderTabBar={() => <ScrollableInkTabBar />} renderTabContent={() => <TabContent />}>
                 <TabPane tab="Basic" key="1">
                   <FormsDefault />

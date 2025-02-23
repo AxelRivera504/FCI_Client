@@ -32,6 +32,8 @@ const Impuestos = lazy(() => import( "../../Generales/Impuestos/Index"));
 
 const FacturaCompras = lazy(() => import( "../../Compras/Factura/Index"));
 
+const FacturaVentas = lazy(() => import("../../Ventas/pages/index/Index"));
+const Facturacion = lazy(() => import("../../Ventas/pages/Facturar/Facturar"));
 
 const UnidadesMedidas = lazy(() => import( "../../Inventario/UnidadesMedidas/Index"));
 const AppMain = () => {
@@ -145,6 +147,42 @@ const AppMain = () => {
                 </div>
             }>
                 <Route path="/FacturaCompras" component={FacturaCompras}/>
+            </Suspense>     
+
+            {/* Listado de facturas */}
+
+            <Suspense fallback={
+                <div className="loader-container">
+                    <div className="loader-container-inner">
+                        <div className="text-center">
+                            <Loader type="ball-pulse-rise"/>
+                        </div>
+                        <h6 className="mt-5">
+                            Please wait while we load all the Forms examples
+                            <small>Because this is a demonstration we load at once all the Forms examples. This wouldn't happen in a real live app!</small>
+                        </h6>
+                    </div>
+                </div>
+            }>
+                <Route path="/ListadoFacturas" component={FacturaVentas}/>
+            </Suspense>     
+
+              {/* Facturacion */}
+
+              <Suspense fallback={
+                <div className="loader-container">
+                    <div className="loader-container-inner">
+                        <div className="text-center">
+                            <Loader type="ball-pulse-rise"/>
+                        </div>
+                        <h6 className="mt-5">
+                            Please wait while we load all the Forms examples
+                            <small>Because this is a demonstration we load at once all the Forms examples. This wouldn't happen in a real live app!</small>
+                        </h6>
+                    </div>
+                </div>
+            }>
+                <Route path="/Facturacion" component={Facturacion}/>
             </Suspense>     
 
             {/* Proveedor */}

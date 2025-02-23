@@ -49,17 +49,22 @@ export const ComprasNav = [
 ]
 export const VentasNav = [
     {
-        icon: 'pe-7s-display2',
-        label: 'Factura',
-        to: '#/tables/regular-tables',
+        icon: 'pe-7s-cash',
+        label: 'Facturación',
+        content: [
+            {
+                label: 'Listado Facturas',
+                to: '#/ListadoFacturas',
+            },
+            {
+                label: 'Facturar',
+                to: '#/Facturacion',
+            },
+        ],
     },
-    {
-        icon: 'pe-7s-display2',
-        label: 'Cliente',
-        to: '#/tables/regular-tables',
-    }
+];
 
-]
+
 export const GeneralNav = [
     {
         icon: 'pe-7s-display2',
